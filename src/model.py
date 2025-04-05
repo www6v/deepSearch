@@ -1,4 +1,4 @@
-import os
+# import os
 import aiohttp
 
 class OpenRouterModel:
@@ -43,4 +43,4 @@ class OpenRouterModel:
                 return content
             
 
-model = OpenRouterModel(api_key=os.environ["OPENROUTER_API_KEY"])            
+# model = OpenRouterModel(api_key=os.environ["OPENROUTER_API_KEY"])            

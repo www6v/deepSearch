@@ -48,7 +48,7 @@ class Agent:
         while True:
             try:
                 # Rate limiting - 1 round per 20 seconds
-                await asyncio.sleep(20)
+                await asyncio.sleep(2)
                 ######   clear_output(wait=True)
 
                 response = await self.prompt.run(

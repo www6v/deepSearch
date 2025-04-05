@@ -4,14 +4,13 @@ from prompt import prompt
 import os
 import asyncio
 
-# os.environ["JINA_API_KEY"] = ''
-# os.environ["OPENROUTER_API_KEY"] = ''
 
 async def main():
 
     print("JINA_API_KEY", os.getenv("JINA_API_KEY")) 
     print("OPENROUTER_API_KEY", os.getenv("OPENROUTER_API_KEY")) 
     print("OPENROUTER_API_KEY", os.environ["OPENROUTER_API_KEY"])  
+   
 
     task = """
     Help me plan a 3 day holiday in Europe in May for under 2000 EURO.

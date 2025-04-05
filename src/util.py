@@ -1,3 +1,4 @@
+import os
 import json
 from typing import (
     Any,    
@@ -5,11 +6,8 @@ from typing import (
     Iterator,
     List,
 )
-from urllib.parse import quote_plus
 
 import aiohttp
-# from IPython.display import clear_output
-# from jinja2 import BaseLoader, Environment
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 

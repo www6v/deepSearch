@@ -8,6 +8,7 @@ from typing import (
     List,
     TypedDict,
 )
+from urllib.parse import quote_plus
 
 
 class ScrapTool:

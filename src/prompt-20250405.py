@@ -4,15 +4,11 @@ from typing import (
 )
 from jinja2 import BaseLoader, Environment
 
-from model import OpenRouterModel
-import os
-
 
 class Prompt:
     def __init__(self, template: str) -> None:
         self.template = template
         self.env = Environment(loader=BaseLoader())
-        self.model = OpenRouterModel(api_key=os.environ["OPENROUTER_API_KEY"])
 
     def __call__(self, **variables) -> str:
         prompt_template = self.env.from_string(self.template)
@@ -25,12 +21,11 @@ class Prompt:
         prompt_variables: Dict[str, Any] = {},
         generation_args: Dict[str, Any] = {},
     ) -> str:
-        # global model
+        global model
         prompt = self(**prompt_variables)
         print(f"\nPrompt:\n{prompt}")
         try:
-            # result = await model(prompt)
-            result = await self.model(prompt)            
+            result = await model(prompt)
             print(f"\nResult:\n{result}")
             return result
         except Exception as e:
