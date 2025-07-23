@@ -54,3 +54,11 @@
 Ref
 
 https://github.com/DavidZWZ/Awesome-Deep-Research
+# Deep Search
++ single Agent
+
+# Deep Research Agent From Scratch
+
+# Deep Search
+  + Google
+  + Anthropic
